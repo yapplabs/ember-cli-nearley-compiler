@@ -1,0 +1,24 @@
+{
+  "name": "ember-cli-nearley-compiler",
+  "version": "0.0.2",
+  "description": "Use this module to preprocess nearley grammar files into javascript grammars.",
+  "main": "index.js",
+  "scripts": {
+    "release": "release-it",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["ember-addon", "nearley"],
+  "author": "Luke Melia",
+  "license": "MIT",
+  "dependencies": {
+    "broccoli-nearley": "^0.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/yapplabs/ember-cli-nearley-compiler.git"
+  },
+  "homepage": "https://github.com/yapplabs/ember-cli-nearley-compiler",
+  "ember-addon": {
+    "before": "ember-cli-babel"
+  }
+}
