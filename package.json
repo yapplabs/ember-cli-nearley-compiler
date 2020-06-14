@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-nearley-compiler",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Use this module to preprocess nearley grammar files into javascript grammars.",
   "keywords": [
     "ember-addon",
