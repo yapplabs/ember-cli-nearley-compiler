@@ -2,23 +2,48 @@
   "name": "ember-cli-nearley-compiler",
   "version": "0.0.2",
   "description": "Use this module to preprocess nearley grammar files into javascript grammars.",
+  "keywords": [
+    "ember-addon",
+    "nearley"
+  ],
+  "homepage": "https://github.com/yapplabs/ember-cli-nearley-compiler",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/yapplabs/ember-cli-nearley-compiler.git"
+  },
+  "license": "MIT",
+  "author": "Luke Melia",
   "main": "index.js",
   "scripts": {
     "release": "release-it",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["ember-addon", "nearley"],
-  "author": "Luke Melia",
-  "license": "MIT",
   "dependencies": {
     "broccoli-nearley": "^0.0.2"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/yapplabs/ember-cli-nearley-compiler.git"
+  "devDependencies": {
+    "release-it": "^13.6.0",
+    "release-it-lerna-changelog": "^2.3.0"
   },
-  "homepage": "https://github.com/yapplabs/ember-cli-nearley-compiler",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
   "ember-addon": {
     "before": "ember-cli-babel"
+  },
+  "release-it": {
+    "plugins": {
+      "release-it-lerna-changelog": {
+        "infile": "CHANGELOG.md",
+        "launchEditor": false
+      }
+    },
+    "git": {
+      "tagName": "v${version}"
+    },
+    "github": {
+      "release": true,
+      "tokenRef": "GITHUB_AUTH"
+    }
   }
 }
